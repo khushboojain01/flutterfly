@@ -9,23 +9,31 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, //removes the debug banner on ui
+      debugShowCheckedModeBanner: false, // Removes the debug banner on UI
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.deepPurple[200],
         body: Center(
-          child: Container( //adds container
+          child: Container( // Adds container
             height: 300,
-            width : 300,
-            color :Colors.green,
-            child:Text("Khushboo Jain"),
-          ),
-        )
-      ),//returns a plain blue ui 
-    );
+            width: 300,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 53, 0, 75), // Set the color within BoxDecoration
+              borderRadius: BorderRadius.circular(20),
+            ),
+            padding: EdgeInsets.all(25),
+            child: Center(
+              child: Text("Khushboo",style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white,)
+              ) //Text 
+            ), //Center
+          ), //cONTAINER
+        ), //center 
+      ), // Returns a plain purple UI
+    ); //materialAPP
   }
 }
