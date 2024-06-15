@@ -16,6 +16,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, // Removes the debug banner on UI
       home: Scaffold(
         backgroundColor: Colors.deepPurple[200],
+        appBar: AppBar(
+          title: Text("Khushboo's App"),
+          backgroundColor: Colors.deepPurple,
+          elevation: 0,
+          leading:Icon(Icons.menu),
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.logout)), 
+          ],
+          ) , //AppBar
         body: Center(
           child: Container( // Adds container
             height: 300,
@@ -25,15 +34,14 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             padding: EdgeInsets.all(25),
-            child: Center(
-              child: Text("Khushboo",style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,)
-              ) //Text 
-            ), //Center
-          ), //cONTAINER
-        ), //center 
-      ), // Returns a plain purple UI
-    ); //materialAPP
+            child: Icon(
+              Icons.sailing,
+              color: Colors.white,
+              size : 64,
+              ),
+          )
+        ) 
+      )
+    );
   }
 }
