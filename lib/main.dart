@@ -16,27 +16,32 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, // Removes the debug banner on UI
       home: Scaffold(
         body: Column(
-          
           children: [
-          //1st Box
-          Container(
-            height:300,
-            width: 300,
-            color: Colors.deepPurple,
-          ),
-          //2nd Box
-          Container(
-            height: 200,
-            width: 200,
-            color: Color.fromARGB(255, 169, 128, 239),
-          ),
-          //3rd Box
-          Container(
-            height: 100,
-            width: 100,
-            color: Color.fromARGB(255, 190, 166, 232),
-          ),
-        ],) 
+            //1st Box
+            Expanded(
+            child: Container(
+              color: Colors.deepPurple,
+            ),
+            ),
+            
+            //2nd Box
+            Expanded(
+              flex: 2,
+            child:Container(
+              color: Color.fromARGB(255, 169, 128, 239),
+              
+            ),
+            ),
+           
+            //3rd Box 
+            Expanded(
+            child: Container(
+              color: Color.fromARGB(255, 190, 166, 232),
+            ),
+            ),
+
+          ],
+        ) 
       )
     );
   }
