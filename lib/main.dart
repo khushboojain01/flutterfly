@@ -15,32 +15,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // Removes the debug banner on UI
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
-        appBar: AppBar(
-          title: Text("Khushboo's App"),
-          backgroundColor: Colors.deepPurple,
-          elevation: 0,
-          leading:Icon(Icons.menu),
-          actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.logout)), 
-          ],
-          ) , //AppBar
-        body: Center(
-          child: Container( // Adds container
-            height: 300,
+        body: Column(
+          
+          children: [
+          //1st Box
+          Container(
+            height:300,
             width: 300,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 53, 0, 75), // Set the color within BoxDecoration
-              borderRadius: BorderRadius.circular(20),
-            ),
-            padding: EdgeInsets.all(25),
-            child: Icon(
-              Icons.sailing,
-              color: Colors.white,
-              size : 64,
-              ),
-          )
-        ) 
+            color: Colors.deepPurple,
+          ),
+          //2nd Box
+          Container(
+            height: 200,
+            width: 200,
+            color: Color.fromARGB(255, 169, 128, 239),
+          ),
+          //3rd Box
+          Container(
+            height: 100,
+            width: 100,
+            color: Color.fromARGB(255, 190, 166, 232),
+          ),
+        ],) 
       )
     );
   }
