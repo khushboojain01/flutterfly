@@ -2,15 +2,15 @@
 import 'package:flutter/material.dart';
 // import 'package:flutterfly/Pages/second_page.dart'; // Commented out as it's not being used
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[400],
+      backgroundColor: Colors.deepPurple[600],
       body:Center(
-        child: Text("Home"),
+        child: Text("PROFILE"),
       )
     );
   }
