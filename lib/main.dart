@@ -15,31 +15,34 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // Removes the debug banner on UI
       home: Scaffold(
-        body: Column(
+        body: ListView(
+          scrollDirection: Axis.horizontal,
           children: [
-            //1st Box
+            //1st Box 
             Expanded(
             child: Container(
+              width: 360,
               color: Colors.deepPurple,
             ),
             ),
             
             //2nd Box
             Expanded(
-              flex: 2,
+              flex: 2, //makes this box bigger than the rest
             child:Container(
+              width: 350,
               color: Color.fromARGB(255, 169, 128, 239),
-              
+  
             ),
             ),
            
             //3rd Box 
             Expanded(
             child: Container(
+              width: 350,
               color: Color.fromARGB(255, 190, 166, 232),
             ),
             ),
-
           ],
         ) 
       )
